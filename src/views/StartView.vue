@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="h-[100dvh] flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-4 md:px-0">
+    <section id="home" class="min-h-[100dvh] scroll-mt-[88px] flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-4 md:px-0">
         <article class="text-center md:text-left">
             <p
                 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -18,6 +18,11 @@
             <img class="size-40 md:size-60 rounded-tr-2xl rounded-bl-2xl rounded-br-md rounded-tl-md" src="/pitpy.jpeg"
                 alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
         </div>
+        <router-link :to="{name: 'skill'}" class="absolute bottom-16 animate-bounce bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+            </svg>
+        </router-link>
     </section>
 </template>
 

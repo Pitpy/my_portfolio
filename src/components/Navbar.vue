@@ -6,7 +6,7 @@ function darkModeToggle() {
 
 <template>
     <nav
-        class="fixed top-0 left-0 right-0 flex items-center justify-between py-6 px-4 md:px-24 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+        class="fixed top-0 left-0 right-0 z-100 flex items-center justify-between py-6 px-4 md:px-24 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
         <a href="/" class="flex items-center justify-center gap-2">
             <img class="size-8 rounded-full" src="/pitpy.jpeg" alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
             <p class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
