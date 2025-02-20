@@ -1,98 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="dark:bg-gray-900">
+<html lang="en" class="bg-gray-100 dark:bg-gray-900">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Pitpy BPSS - Fullstack Developer Portfolio. Experienced developer specializing in web development and software solutions. ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ." />
-    <meta name="keywords"
-        content="Pitpy BPSS, ປິດປີ່ ບຸນພາໄຊຊົນ, Fullstack Developer, Web Development, Software Engineer, Portfolio, ປິດປີ່ ບຸນພາໄຊຊົນ, ນັກພັດທະນາ, ພັດທະນາເວບໄຊທ໌, ແອັປມືຖື, IOS, Android App" />
-    <meta name="author" content="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
-    <meta property="og:title"
-        content="Pitpy BPSS - Fullstack Developer Portfolio | ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ" />
-    <meta property="og:description"
-        content="Professional portfolio of Pitpy BPSS, a Fullstack Developer specializing in web development. ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ." />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/20512489?v=4" />
-    <meta property="og:url" content="https://p2g-dev.com" />
-    <title>Pitpy BPSS | Fullstack Developer | P2G Dev | ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ | Portfolio</title>
-    <link rel="canonical" href="https://p2g-dev.com" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-    </script>
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://www.p2g-dev.com",
-      "@type": "Article",
-      "headline": "Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ - Fullstack Developer Portfolio | P2G Dev | ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ",
-      "image": "https://avatars.githubusercontent.com/u/20512489?v=4"
-    }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Pitpy BPSS - Fullstack Developer Portfolio. Experienced developer specializing in web development and software solutions. ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ." />
+  <meta name="keywords"
+    content="Pitpy BPSS, ປິດປີ່ ບຸນພາໄຊຊົນ, Fullstack Developer, Web Development, Software Engineer, Portfolio, ປິດປີ່ ບຸນພາໄຊຊົນ, ນັກພັດທະນາ, ພັດທະນາເວບໄຊທ໌, ແອັປມືຖື, IOS, Android App" />
+  <meta name="author" content="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
+  <meta property="og:title"
+    content="Pitpy BPSS - Fullstack Developer Portfolio | ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ" />
+  <meta property="og:description"
+    content="Professional portfolio of Pitpy BPSS, a Fullstack Developer specializing in web development. ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/20512489?v=4" />
+  <meta property="og:url" content="https://p2g-dev.com" />
+  <title>Pitpy BPSS | Fullstack Developer | P2G Dev | ປິດປີ່ ບຸນພາໄຊຊົນ ນັກພັດທະນາຈັດເຕັມ | Portfolio</title>
+  <link rel="canonical" href="https://p2g-dev.com" />
+  <link rel="icon" href="/favicon.ico">
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-900">
-    <nav
-        class="fixed top-0 left-0 right-0 flex items-center justify-between py-6 px-4 md:px-24 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-        <a href="/" class="flex items-center justify-center gap-2">
-            <img class="size-8 rounded-full" src="https://avatars.githubusercontent.com/u/20512489?v=4"
-                alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
-            <p class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
-                Pitpy BPSS
-            </p>
-        </a>
-        <div class="flex space-x-4">
-            <a href="https://www.facebook.com/PitpyBPSS" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-2">
-                <img class="size-5 dark:invert" src="./assets/fb.svg" alt="Pitpy BPSS Facebook">
-            </a>
-            <a href="https://www.instagram.com/pitpybpss/" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-2">
-                <img class="size-5 dark:invert" src="./assets/ig.svg" alt="Pitpy BPSS Instagram">
-            </a>
-            <a href="https://x.com/Pitpy" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
-                <img class="size-4 dark:invert" src="./assets/x.svg" alt="Pitpy BPSS X">
-            </a>
-            <button id="darkModeToggle"
-                class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
-                <img class="size-6 dark:hidden" src="./assets/moon.svg" alt="dark mode">
-                <img class="size-6 hidden dark:block" src="./assets/sun.svg" alt="light mode">
-            </button>
-            <script>
-                document.getElementById('darkModeToggle').addEventListener('click', () => {
-                    document.documentElement.classList.toggle('dark');
-                });
-            </script>
-        </div>
-    </nav>
-    <main class="h-[100dvh] flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-4 md:px-0">
-        <article class="text-center md:text-left">
-            <p
-                class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                Hi
-            </p>
-            <p class="text-2xl md:text-3xl font-semibold mt-2 dark:text-white">I'm Pitpy BPSS</p>
-            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-1">Fullstack Developer</p>
-            <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 mt-4 animate-pulse">Let's work together
-            </p>
-        </article>
-        <div>
-            <img class="size-40 md:size-60 rounded-tr-2xl rounded-bl-2xl rounded-br-sm rounded-tl-sm"
-                src="https://avatars.githubusercontent.com/u/20512489?v=4" alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
-        </div>
-    </main>
-    <footer class="fixed bottom-0 left-0 right-0 flex items-center justify-center py-4 bg-white/80 dark:bg-gray-800/80">
-        <p class="text-sm text-gray-500 dark:text-gray-400">© 2025 Pitpy BPSS. All rights reserved.</p>
-    </footer>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
