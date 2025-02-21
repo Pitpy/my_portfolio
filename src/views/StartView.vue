@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section id="home" class="min-h-[100dvh] scroll-mt-[88px] flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-4 md:px-0">
+    <section id="home" class="min-h-[100dvh] scroll-mt-[88px] flex flex-col-reverse md:flex-row items-center justify-center gap-16 px-4 md:px-0">
         <article class="text-center md:text-left">
             <p
                 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -15,10 +15,14 @@
             </p>
         </article>
         <div>
-            <img class="size-40 md:size-60 rounded-tr-2xl rounded-bl-2xl rounded-br-md rounded-tl-md" src="/pitpy.jpeg"
-                alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
+            <div class="relative">
+                <div class="absolute -inset-3 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full blur animate-[spin_3s_linear_infinite]"></div>
+                <img class="size-50 md:size-70 rounded-full relative border-2 border-white dark:border-gray-800" 
+                    src="/pitpy.jpeg"
+                    alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
+            </div>
         </div>
-        <router-link :to="{name: 'skill'}" class="absolute bottom-16 animate-bounce bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded-full">
+        <router-link :to="{name: 'skill'}" class="absolute bottom-16 animate-bounce bg-gradient-to-b from-purple-400/30 to-pink-600/30 p-2 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
             </svg>
