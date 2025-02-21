@@ -1,7 +1,17 @@
 <script lang="ts" setup>
+import { onMounted } from "vue";
 function darkModeToggle() {
-    document.documentElement.classList.toggle('dark');
+    localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
+    document.documentElement.classList.toggle("dark");
 }
+onMounted(() => {
+    document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+});
 </script>
 
 <template>
@@ -16,19 +26,19 @@ function darkModeToggle() {
         <div class="flex space-x-4">
             <a href="https://www.facebook.com/PitpyBPSS" target="_blank" rel="noopener noreferrer"
                 class="flex items-center gap-2">
-                <img class="size-5 dark:invert" src="@/assets/icon/fb.svg" alt="Pitpy BPSS Facebook">
+                <img class="size-5 dark:invert" src="@/assets/icon/fb.svg" alt="Pitpy BPSS Facebook" />
             </a>
             <a href="https://www.instagram.com/pitpybpss/" target="_blank" rel="noopener noreferrer"
                 class="flex items-center gap-2">
-                <img class="size-5 dark:invert" src="@/assets/icon/ig.svg" alt="Pitpy BPSS Instagram">
+                <img class="size-5 dark:invert" src="@/assets/icon/ig.svg" alt="Pitpy BPSS Instagram" />
             </a>
             <a href="https://x.com/Pitpy" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
-                <img class="size-4 dark:invert" src="@/assets/icon/x.svg" alt="Pitpy BPSS X">
+                <img class="size-4 dark:invert" src="@/assets/icon/x.svg" alt="Pitpy BPSS X" />
             </a>
             <button @click="darkModeToggle()" id="darkModeToggle"
                 class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
-                <img class="size-6 dark:hidden" src="@/assets/icon/moon.svg" alt="dark mode">
-                <img class="size-6 hidden dark:block" src="@/assets/icon/sun.svg" alt="light mode">
+                <img class="size-6 dark:hidden" src="@/assets/icon/moon.svg" alt="dark mode" />
+                <img class="size-6 hidden dark:block" src="@/assets/icon/sun.svg" alt="light mode" />
             </button>
         </div>
     </nav>

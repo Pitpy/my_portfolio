@@ -16,7 +16,7 @@
         </article>
         <div>
             <div class="relative">
-                <div class="absolute -inset-3 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full blur animate-[spin_3s_linear_infinite]"></div>
+                <div class="absolute -inset-3 bg-gradient-to-r from-purple-400 via-blue-500 to-pink-600 rounded-full blur animate-[spin_3s_linear_infinite]"></div>
                 <img class="size-50 md:size-70 rounded-full relative border-2 border-white dark:border-gray-800" 
                     src="/pitpy.jpg"
                     alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
