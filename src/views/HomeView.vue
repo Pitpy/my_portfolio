@@ -10,7 +10,6 @@ import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 
-router.replace({ name: 'home' })
 const sections = ['home','skill']
 
 let lastScrollPosition = window.scrollY

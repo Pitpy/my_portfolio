@@ -10,7 +10,7 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/skill',
+      path: '/#skill',
       name: 'skill',
       component: HomeView,
     }
