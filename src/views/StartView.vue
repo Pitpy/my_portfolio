@@ -4,7 +4,7 @@
 
 <template>
     <section id="home" class="min-h-[100dvh] scroll-mt-[88px] flex flex-col-reverse md:flex-row items-center justify-center gap-16 px-4 md:px-0">
-        <article class="text-center md:text-left">
+        <article class="text-center md:text-left animate-slideInLeft">
             <p
                 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 Hi
@@ -14,7 +14,7 @@
             <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 mt-4 animate-pulse">Let's work together
             </p>
         </article>
-        <div>
+        <div class="animate-slideInRight">
             <div class="relative">
                 <div class="absolute -inset-3 bg-gradient-to-r from-purple-400 via-blue-500 to-pink-600 rounded-full blur animate-[spin_3s_linear_infinite]"></div>
                 <img class="size-50 md:size-70 rounded-full relative border-2 border-white dark:border-gray-800" 
@@ -30,4 +30,34 @@
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 1s ease-out forwards;
+}
+</style>

@@ -19,7 +19,7 @@ onMounted(() => {
         class="fixed top-0 left-0 right-0 z-100 flex items-center justify-between py-6 px-4 md:px-24 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
         <a href="/" class="flex items-center justify-center gap-2">
             <img class="size-8 rounded-full" src="/logo.jpg" alt="Pitpy BPSS | ປິດປີ່ ບຸນພາໄຊຊົນ" />
-            <p class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
+            <p class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-600 to-purple-500 dark:from-purple-400 dark:via-pink-500 dark:to-purple-400 animate-gradient">
                 Pitpy BPSS
             </p>
         </a>
@@ -44,4 +44,15 @@ onMounted(() => {
     </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+}
+</style>
