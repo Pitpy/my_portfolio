@@ -10,8 +10,8 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/#skill',
-      name: 'skill',
+      path: '/#techstack',
+      name: 'techstack',
       component: HomeView,
     }
   ],
