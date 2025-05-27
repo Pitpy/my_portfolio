@@ -7,6 +7,7 @@ interface menu {
     image: string
     price: string
     description: string
+    colors: string
 }
 
 const menus = ref<menu[]>([
