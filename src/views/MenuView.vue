@@ -11,13 +11,13 @@ interface menu {
 }
 
 const menus = ref<menu[]>([
-    { id: 1, name: 'ນ້ຳສະກັດໝາກແຕງໂມ', image: '/menu/water_melon.png', price: '35,000', description: 'ແຕງໂມແທ້ 100%', colors: 'from-[#FF6162] to-[#f44545]' },
-    { id: 2, name: 'ນ້ຳສະກັດແຄຣ໋ອດ', image: '/menu/carrot.png', price: '35,000', description: 'ແຄຣ໋ອດແທ້ 100%', colors: 'from-[#f88453d6] to-[#f35d1ed6]' },
-    { id: 3, name: 'ນ້ຳສະກັດບີທຣູດສ໌', image: '/menu/beetroot.png', price: '35,000', description: 'ບີທຣູດສ໌ແທ້ 100%', colors: 'from-[#9479A6] to-[#9F71BD]' },
-    { id: 4, name: 'ນ້ຳຊາໝາກໄມ້ລວມ', image: '/menu/fruits_tee.png', price: '38,000', description: 'ຊາໝາກໄມ້ລວມຫຼາຍຊະນິດ', colors: 'from-amber-300 to-amber-500' },
-    { id: 5, name: 'ນ້ຳສະກັດໝາກໄມ້ລວມ', image: '/menu/mix_1.png', price: '35,000', description: 'ແຄຣ໋ອດ+ແອັບເປີ້ນ+ໝາກນັດ', colors: 'from-[#D0E484] to-[#A1BC1B]' },
-    { id: 6, name: 'ນ້ຳສະກັດໝາກໄມ້ລວມ', image: '/menu/mix_2.png', price: '35,000', description: 'ແຕງໂມ+ແອັບເປີ້ນ+ໝາກນັດ', colors: 'from-pink-300 to-pink-400' },
-    { id: 7, name: 'ນ້ຳສະກັດໝາກໄມ້ລວມ', image: '/menu/mix_3.png', price: '35,000', description: 'ໝາກເລັ່ນ+ແຕງໂມ+ສິດາ', colors: 'from-indigo-300 to-indigo-400' },
+    { id: 1, name: 'ນ້ຳສະກັດໝາກແຕງໂມ', image: '/img/water_melon.png', price: '35,000', description: 'ແຕງໂມແທ້ 100%', colors: 'from-[#FF6162] to-[#f44545]' },
+    { id: 2, name: 'ນ້ຳສະກັດແຄຣ໋ອດ', image: '/img/carrot.png', price: '35,000', description: 'ແຄຣ໋ອດແທ້ 100%', colors: 'from-[#f88453d6] to-[#f35d1ed6]' },
+    { id: 3, name: 'ນ້ຳສະກັດບີທຣູດສ໌', image: '/img/beetroot.png', price: '35,000', description: 'ບີທຣູດສ໌ແທ້ 100%', colors: 'from-[#9479A6] to-[#9F71BD]' },
+    { id: 4, name: 'ນ້ຳຊາໝາກໄມ້ລວມ', image: '/img/fruits_tee.png', price: '38,000', description: 'ຊາໝາກໄມ້ລວມຫຼາຍຊະນິດ', colors: 'from-amber-300 to-amber-500' },
+    { id: 5, name: 'ນ້ຳສະກັດໝາກໄມ້ລວມ', image: '/img/mix_1.png', price: '35,000', description: 'ແຄຣ໋ອດ+ແອັບເປີ້ນ+ໝາກນັດ', colors: 'from-[#D0E484] to-[#A1BC1B]' },
+    { id: 6, name: 'ນ້ຳສະກັດໝາກໄມ້ລວມ', image: '/img/mix_2.png', price: '35,000', description: 'ແຕງໂມ+ແອັບເປີ້ນ+ໝາກນັດ', colors: 'from-pink-300 to-pink-400' },
+    { id: 7, name: 'ນ້ຳສະກັດໝາກໄມ້ລວມ', image: '/img/mix_3.png', price: '35,000', description: 'ໝາກເລັ່ນ+ແຕງໂມ+ສິດາ', colors: 'from-indigo-300 to-indigo-400' },
 ])
 </script>
 
