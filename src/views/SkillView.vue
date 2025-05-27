@@ -18,10 +18,10 @@ import iconFigma from '@/components/icon/IconFigma.vue';
 import iconHono from '@/components/icon/IconHono.vue';
 import iconMysql from '@/components/icon/IconMySql.vue';
 
-const techStackList = ref([
+const skillList = ref([
     { name: 'Vue.js', icon: iconVue },
-    { name: 'Nuxt.js', icon: iconNuxt },
-    { name: 'Flutter', icon: iconFlutter },
+    { name: 'Nuxt.js', icon:  iconNuxt },
+    {name: 'Flutter', icon: iconFlutter},
     { name: 'Tailwind CSS', icon: iconTailwind },
     { name: 'NodeJs', icon: iconNode },
     { name: 'Hono.js', icon: iconHono },
@@ -48,27 +48,24 @@ onMounted(() => {
         });
     }, { threshold: 0.1 });
 
-    const techstackSection = document.querySelector('#techstack');
-    if (techstackSection) {
-        observer.observe(techstackSection);
+    const skillSection = document.querySelector('#skill');
+    if (skillSection) {
+        observer.observe(skillSection);
     }
 });
 </script>
 
 <template>
-    <section id="techstack"
-        class="min-h-[100dvh] scroll-mt-[88px] flex flex-col items-center justify-center bg-gradient-to-tr from-blue-300/20 to-indigo-400/20">
-        <h2
-            class="text-4xl font-bold my-12 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 text-transparent bg-clip-text">
-            Tech Stacks
-        </h2>
+    <section id="skill" class="min-h-[100dvh] scroll-mt-[88px] flex flex-col items-center justify-center bg-gradient-to-tr from-blue-300/20 to-indigo-400/20">
+        <h2 class="text-4xl font-bold my-12 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 text-transparent bg-clip-text">Skills</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mb-30">
-            <div v-for="(techstack, index) in techStackList" :key="techstack.name"
-                :style="{ animationDelay: `${index * 0.1}s` }"
-                class="flex flex-col items-center p-6 bg-white/30 dark:bg-gray-800/40 rounded-xl shadow-lg shadow-blue-300/20 dark:shadow-stone-900/20 hover:shadow-xl transition-shadow duration-300 space-y-4"
-                :class="{ 'animate-fade-in-up': isVisible }">
-                <component :is="techstack.icon" class="w-16 h-16" />
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">{{ techstack.name }}</h3>
+            <div v-for="(skill, index) in skillList" 
+                 :key="skill.name" 
+                 :style="{ animationDelay: `${index * 0.1}s` }"
+                 class="flex flex-col items-center p-6 bg-white/30 dark:bg-gray-800/40 rounded-xl shadow-lg shadow-blue-300/20 dark:shadow-stone-900/20 hover:shadow-xl transition-shadow duration-300 space-y-4"
+                 :class="{ 'animate-fade-in-up': isVisible }">
+                <component :is="skill.icon" class="w-16 h-16" />
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">{{ skill.name }}</h3>
             </div>
         </div>
     </section>
@@ -80,7 +77,6 @@ onMounted(() => {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);

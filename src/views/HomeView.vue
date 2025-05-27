@@ -2,7 +2,7 @@
 import myNavbar from '@/components/Navbar.vue';
 import myFooter from '@/components/Footer.vue';
 import startView from '@/views/StartView.vue';
-import techStackView from '@/views/TechStackView.vue';
+import skillView from '@/views/SkillView.vue';
 
 import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
@@ -10,7 +10,7 @@ import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 
-const sections = ['home', 'techstack']
+const sections = ['home','skill']
 
 let lastScrollPosition = window.scrollY
 let isScrollingDown = true
@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach(entry => {    
         if (entry.isIntersecting && ((entry.intersectionRatio >= 0.2 && entry.intersectionRatio < 0.4) && isScrollingDown) || (entry.intersectionRatio >= 0.5 && !isScrollingDown)) {
           const sectionId = entry.target.id
           if (route.name !== sectionId) {
@@ -41,9 +41,9 @@ onMounted(() => {
   )
 
   sections.forEach(id => {
-    const element = document.getElementById(id)
-    if (element) observer.observe(element)
-  })
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
   // Cleanup observer
   return () => {
     sections.forEach(id => {
@@ -73,12 +73,10 @@ const scrollToTop = () => {
 <template>
   <my-navbar />
   <start-view />
-  <tech-stack-view />
+  <skill-view />
   <my-footer />
-  <button @click="scrollToTop" v-if="currentScrollPosition >= 690"
-    class="fixed bottom-4 right-4 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      class="w-8 h-8 text-gray-800 dark:text-white">
+  <button @click="scrollToTop" v-if="currentScrollPosition >= 690" class="fixed bottom-4 right-4 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-800 dark:text-white">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 11l7-7 7 7M5 19l7-7 7 7" />
     </svg>
   </button>
