@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import MenuView from '../views/MenuView.vue'
+import ProductView from '../views/ProductView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -18,7 +18,7 @@ const router = createRouter({
     {
       path: '/menu',
       name: 'menu',
-      component: MenuView,
+      component: ProductView,
     }
   ],
   scrollBehavior(to) {
