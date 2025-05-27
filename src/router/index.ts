@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ProductView from '../views/ProductView.vue'
+// import ProductView from '../views/ProductView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,11 +15,11 @@ const router = createRouter({
       name: 'skill',
       component: HomeView,
     },
-    {
-      path: '/product',
-      name: 'product',
-      component: ProductView,
-    }
+    // {
+    //   path: '/product',
+    //   name: 'product',
+    //   component: ProductView,
+    // }
   ],
   scrollBehavior(to) {
     if (to.hash) {
