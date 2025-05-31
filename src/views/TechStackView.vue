@@ -17,24 +17,32 @@ import iconGit from '@/components/icon/IconGit.vue';
 import iconFigma from '@/components/icon/IconFigma.vue';
 import iconHono from '@/components/icon/IconHono.vue';
 import iconMysql from '@/components/icon/IconMySql.vue';
+import iconDocker from '@/components/icon/IconDocker.vue';
+import iconRedis from '@/components/icon/IconRedis.vue';
+import iconPostgreSQL from '@/components/icon/IconPostgreSQL.vue';
+import iconFastAPI from '@/components/icon/IconFastAPI.vue';
 
-const skillList = ref([
+const stackList = ref([
+    { name: 'HTML5', icon: iconHtml },
+    { name: 'CSS3', icon: iconCss },
+    { name: 'JavaScript', icon: iconJavaScript },
+    { name: 'TypeScript', icon: iconTypeScript },
     { name: 'Vue.js', icon: iconVue },
     { name: 'Nuxt.js', icon: iconNuxt },
-    { name: 'Flutter', icon: iconFlutter },
     { name: 'Tailwind CSS', icon: iconTailwind },
     { name: 'NodeJs', icon: iconNode },
     { name: 'Hono.js', icon: iconHono },
-    { name: 'Dart', icon: iconDart },
-    { name: 'Go', icon: iconGo },
-    { name: 'JavaScript', icon: iconJavaScript },
-    { name: 'TypeScript', icon: iconTypeScript },
-    { name: 'HTML5', icon: iconHtml },
-    { name: 'CSS3', icon: iconCss },
     { name: 'Python', icon: iconPython },
+    { name: 'FastAPI', icon: iconFastAPI },
+    { name: 'Go', icon: iconGo },
+    { name: 'Dart', icon: iconDart },
+    { name: 'Flutter', icon: iconFlutter },
+    { name: 'PostgreSQL', icon: iconPostgreSQL },
     { name: 'MySql', icon: iconMysql },
+    { name: 'Redis', icon: iconRedis },
+    { name: 'Docker', icon: iconDocker },
     { name: 'Git', icon: iconGit },
-    { name: 'Figma', icon: iconFigma },
+    { name: 'Figma', icon: iconFigma }
 ]);
 
 const isVisible = ref(false);
@@ -48,25 +56,25 @@ onMounted(() => {
         });
     }, { threshold: 0.1 });
 
-    const skillSection = document.querySelector('#skill');
-    if (skillSection) {
-        observer.observe(skillSection);
+    const techStackSection = document.querySelector('#tech-stack');
+    if (techStackSection) {
+        observer.observe(techStackSection);
     }
 });
 </script>
 
 <template>
-    <section id="skill"
+    <section id="tech-stack"
         class="min-h-[100dvh] scroll-mt-[88px] flex flex-col items-center justify-center bg-gradient-to-tr from-blue-300/20 to-indigo-400/20">
         <h2
             class="text-4xl font-bold my-12 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 text-transparent bg-clip-text">
             Tech Stack</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mb-30">
-            <div v-for="(skill, index) in skillList" :key="skill.name" :style="{ animationDelay: `${index * 0.1}s` }"
+            <div v-for="(stack, index) in stackList" :key="stack.name" :style="{ animationDelay: `${index * 0.1}s` }"
                 class="flex flex-col items-center p-6 bg-white/30 dark:bg-gray-800/40 rounded-xl shadow-lg shadow-blue-300/20 dark:shadow-stone-900/20 hover:shadow-xl transition-shadow duration-300 space-y-4"
                 :class="{ 'animate-fade-in-up': isVisible }">
-                <component :is="skill.icon" class="w-16 h-16" />
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">{{ skill.name }}</h3>
+                <component :is="stack.icon" class="w-16 h-16" />
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">{{ stack.name }}</h3>
             </div>
         </div>
     </section>
