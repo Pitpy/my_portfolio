@@ -3,7 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import PackageView from '@/views/PackageView.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/'), // Important
   routes: [
     {
       path: '/',
