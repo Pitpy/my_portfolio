@@ -27,7 +27,7 @@ app.get('/', (_req, res) => {
 });
 
 // Start server
-const port = process.env.PORT || 8080;
+const port = 3000;
 app.listen(port, () => {
     console.log(`Vue app running in production mode on port ${port}`);
 });
