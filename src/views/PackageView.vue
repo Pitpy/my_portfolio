@@ -3,6 +3,46 @@ import { onMounted, ref } from 'vue';
 import Footer from '@/components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
 
+import { useHead } from '@vueuse/head';
+
+useHead({
+    title: 'ແພັກເກັດການພັດທະນາເວັບໄຊທ໌ - My Portfolio',
+    meta: [
+        {
+            name: 'description',
+            content: 'ເລືອກແພັກເກັດການພັດທະນາເວັບໄຊທ໌ທີ່ສົມບູນແບບສໍາລັບຄວາມຕ້ອງການຂອງທ່ານ. ມີແພັກເກັດພື້ນຖານ, ມືອາຊີບ, ແລະ ວິສາຫະກິດ ໃຫ້ເລືອກ.'
+        },
+        {
+            name: 'keywords',
+            content: 'web development packages, ແພັກເກັດເວັບໄຊທ໌, website design, ລາວ, Laos, portfolio'
+        },
+        {
+            property: 'og:title',
+            content: 'ແພັກເກັດການພັດທະນາເວັບໄຊທ໌ - My Portfolio'
+        },
+        {
+            property: 'og:description',
+            content: 'ເລືອກແພັກເກັດການພັດທະນາເວັບໄຊທ໌ທີ່ສົມບູນແບບສໍາລັບຄວາມຕ້ອງການຂອງທ່ານ'
+        },
+        {
+            property: 'og:type',
+            content: 'website'
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+        },
+        {
+            name: 'twitter:title',
+            content: 'ແພັກເກັດການພັດທະນາເວັບໄຊທ໌'
+        },
+        {
+            name: 'twitter:description',
+            content: 'ເລືອກແພັກເກັດການພັດທະນາເວັບໄຊທ໌ທີ່ສົມບູນແບບສໍາລັບຄວາມຕ້ອງການຂອງທ່ານ'
+        }
+    ]
+});
+
 const isLoaded = ref(false);
 
 onMounted(() => {
